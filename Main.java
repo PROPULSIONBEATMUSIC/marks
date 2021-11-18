@@ -16,6 +16,7 @@ public class Main {
         String stud7 = "Петр";
         String stud8 = "Владислав";
 
+        ArrayList<String> list2 = new ArrayList<>();
         ArrayList<String> list = new ArrayList<>();
         list.add(stud1);
         list.add(stud2);
@@ -35,14 +36,20 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             int mark = sc.nextInt();
             System.out.println(item+ " Получил " + mark);
-            if (mark < 0 || mark > 10) {
+            if (mark < 0 || mark > 5) {
                 System.out.println("Ошибка");
                 break;
             }
             list.remove(item);
+            list2.add(item);
+            System.out.println("Новый список ");
+            String prin = sc.nextLine();
+            System.out.println("Вывести студентов");
+            if(prin == "print"){
+                System.out.println(list2);
+            }
             System.out.println(list);
 
         }
     }
-
 }
